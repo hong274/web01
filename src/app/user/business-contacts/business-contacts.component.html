@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="main-content" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+    <p></p>
+    <table style="margin-top: 10px; height: 90%; width: 80%;">
+      <thead>
+        <tr>
+          <th style="width: 25%;">Contact Name</th>
+          <th style="width: 25%;">Contact Age</th>
+          <th style="width: 25%;">Contact Major</th>
+          <th style="width: 25%;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of students; let i = index">
+          <td style="width: 25%;">{{ contact.name }}</td>
+          <td style="width: 25%;">{{ contact.age }}</td>
+          <td style="width: 25%;">{{ contact.major }}</td>
+          <td>
+            <button type="Delete">Delete</button>
+            <button type="Edit">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

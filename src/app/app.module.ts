@@ -15,13 +15,27 @@ import { ProjectComponent } from './project/project.component';
 import { ServiesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import appRoutes from './routerConfig';
+import { LoginFormComponent } from './user/login-form/login-form.component';
+import { BusinessContactsComponent } from './user/business-contacts/business-contacts.component';
+import { LoginViewComponent } from './user/login-view/login-view.component';
+import { FormsModule } from '@angular/forms';
+import { ContactListComponent } from './contact-list/contact-list.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
+const routes: Routes = [
+  { path: 'login', component: LoginViewComponent },
+  { path: 'contacts', component: BusinessContactsComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', redirectTo: '/login' }
+];
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, AboutComponent,ProjectComponent,ServiesComponent,ContactComponent
+    AppComponent, HomeComponent, AboutComponent,ProjectComponent,ServiesComponent,ContactComponent, LoginFormComponent, BusinessContactsComponent, LoginViewComponent, ContactListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +44,9 @@ import appRoutes from './routerConfig';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   
@@ -37,4 +54,5 @@ import appRoutes from './routerConfig';
   bootstrap: [AppComponent]
 
 })
+
 export class AppModule { }

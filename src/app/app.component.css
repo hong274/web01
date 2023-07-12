@@ -53,6 +53,12 @@ body {
     height: 72px;
   }
 
+  .button-with-color-change:hover {
+    background-color: #fef7f7; 
+    color: rgb(17, 14, 49);
+    height: 72px;
+  }
+
   .center {
     display: flex;
     justify-content: center;

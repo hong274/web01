@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="main-content" style="display: flex; justify-content: center; align-items: center;">
+    <div class="user-content">
+        <form (ngSubmit)="login()" style="margin-left: 60px;margin-top: 60px;">
+          <div style="display: flex; align-items: center;">
+            <label for="username">Username&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="username" name="username" [(ngModel)]="username">
+          </div>
+          <p></p>
+          <div style="display: flex; align-items: center;">
+            <label for="password">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="password" id="password" name="password" [(ngModel)]="password">
+          </div>
+          <p></p>
+          <div style="display: flex; justify-content: center;">
+            <button type="submit" style="margin-left: 0px;">Login</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+

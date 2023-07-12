@@ -1,1 +1,28 @@
-<p>This is contact page!</p>
+<div class="container">
+    <div class="sidebar">
+      <img src="../assets/c_1.jpg" alt="Image" width="100%" height="408px" style="border-radius: 15px;">
+    </div>
+    <div class="main-content">
+      <form action="/contact" method="post"  style="margin-left: 100px;">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" size="20px" required>
+      
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" size="20px" required>
+      
+        <label for="contact-number">Contact Number:</label>
+        <input type="tel" id="contact-number" name="contact-number" size="20px" required>
+      
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" size="40px">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" style="width:150%;" required></textarea>
+
+        <p class="button-container">
+          <button type="submit">Submit</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="reset">Reset</button>
+      </form>
+    </div>
+  </div>
